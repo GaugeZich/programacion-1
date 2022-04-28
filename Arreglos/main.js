@@ -19,7 +19,7 @@ series.forEach((element,index) => {
 series.forEach(element => {
     console.log('Series: '+element)
 */
-//Como agregar un elemento al inal de un array
+//Como agregar un elemento al final de un array
 series.push('Dragon Ball')
 console.log(series)
 //Como eliminar el ultimo elemento de un arreglo
