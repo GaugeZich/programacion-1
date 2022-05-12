@@ -11,7 +11,7 @@ function mostrar(){
     const dato1 = document.getElementById("dato1").value
     const dato2 = document.getElementById("dato2").value
     //Se guarda el resultado en una constante
-    const resultado=(calcular(dato1,dato2))
+    const resultado = calcular(dato1,dato2)
     //Se guardara el resultado en el h4
     document.getElementById("h4_r").textContent = resultado;
 }
