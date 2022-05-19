@@ -7,3 +7,4 @@ async function obtener_datos()
         console.log(element.title)
     });
 }
+obtener_datos()
