@@ -11,39 +11,25 @@ const productos = async (categoria) => {
                         <div class="card-body">
                             <h5 class="card-title">${element.title}</h5>
                             <p class="card-text"><p>
-                            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
+                            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#prueba_${Number(element.id)}" aria-expanded="false" aria-controls="collapseWidthExample">
                               View more info
                             </button>
                           </p>
-                          <div style="min-height: 120px;">
-                            <div class="collapse collapse-horizontal" id="collapseWidthExample">
-                              <div class="card card-body" style="width: 300px;">
+                          <div >
+                            <div class="collapse collapse-horizontal" id="prueba_${Number(element.id)}">
+                              <div class="card card-body">
                                 ${element.description}
+                                <br><br>
+                                Price: ${element.price}\$
                               </div>
                             </div>
                           </div></p>
-                            <a href="#" class="btn btn-primary">Buy</a>
+                            <a href="#" class="btn btn-primary" ">Buy</a>
                         </div>
                     </div>
-                    <br>
                 </div>
-           
         `
         filas.push(fila)
     });
     document.getElementById("div_c").innerHTML = filas.join('')
 }
-/*
-<p>
-  <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
-    View more info
-  </button>
-</p>
-<div style="min-height: 120px;">
-  <div class="collapse collapse-horizontal" id="collapseWidthExample">
-    <div class="card card-body" style="width: 300px;">
-      ${element.description}
-    </div>
-  </div>
-</div>
-*/
