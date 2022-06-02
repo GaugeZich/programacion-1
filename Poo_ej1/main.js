@@ -4,6 +4,7 @@ function calcular(){
     let dato2 = document.getElementById("inp_dato2").value
     let dato3 = document.getElementById("inp_dato3").value
     const trapecio = new Trapecio(dato1,dato2,dato3)
-    trapecio.calculo()
+    const respuesta = trapecio.calculo()
+    document.getElementById("h1_r").textContent = respuesta
 }
 document.getElementById("btn").addEventListener("click",calcular)
