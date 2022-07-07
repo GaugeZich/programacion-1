@@ -12,7 +12,7 @@
 <body>
     <nav class="navbar bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand">Navbar</a>
+            <a class="navbar-brand">Tiendita bien picantona</a>
             <form class="d-flex" role="search">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-success" type="submit">Search</button>
@@ -28,15 +28,16 @@
                 </div>
                 <div class="input-group mb-3">
                     <span class="input-group-text" id="inputGroup-sizing-default">Precio de venta:</span>
-                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" id="inp_precio">
+                    <input type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" id="inp_precio">
                 </div>
                 <select class="form-select mb-3" aria-label="Default select example" id="slt_cat">
-                    <option selected disabled>Categoria:</option>
-                    <option value="Heladera">Heladera</option>
+                    <option disabled>Categoria:</option>
+                    <option selected value="Heladera">Heladera</option>
                     <option value="TV">TV</option>
                     <option value="Cocina">Cocina</option>
                 </select>
                 <button type="button" class="btn btn-outline-info" id="btn">Guardar</button>
+                <button style="display: none;" type="button" class="btn btn-success" id="btn_actualizar">Actualizar</button>
             </div>
             <div class="col-lg-8">
                 <table class="table table-dark table-striped-columns">

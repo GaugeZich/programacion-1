@@ -24,3 +24,8 @@ function eliminar(){
     producto.borrar_producto(indice)
 }
 document.getElementById("btn_eliminar").addEventListener("click",eliminar)
+function editar(){
+    let producto = new Producto()
+    producto.actualizar_producto()
+}
+document.getElementById("btn_actualizar").addEventListener("click",editar)
