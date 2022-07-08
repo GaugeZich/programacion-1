@@ -29,6 +29,7 @@ export default class Producto {
        reflejar los datos actualizados que proviene del localStorage, especificamente del item "productos"
        */
        this.obtener_producto()
+       this.vaciar_formulario()
     }
     obtener_producto(){
         /*Recolectamos todos los productos alojados en el item "productos"
@@ -57,6 +58,7 @@ export default class Producto {
             filas.push(fila)
         });
         document.getElementById("tbody").innerHTML = filas.join('')
+        this.vaciar_formulario()
     }
     borrar_producto(indice){
         let lista_productos = JSON.parse(localStorage.getItem("productos"))
@@ -74,5 +76,9 @@ export default class Producto {
         this.obtener_producto()
         document.getElementById("btn").style.display = "block"
         document.getElementById("btn_actualizar").style.display = "none"
+        this.vaciar_formulario()
+    }
+    vaciar_formulario(){
+        document.getElementById("form_producto").reset()
     }
 }

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de videojuegos</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Videogames store</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarColor03">
+            <ul class="navbar-nav me-auto">
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-sm-2" type="text" placeholder="Search">
+              <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="form-group">
+                    <label class="form-label mt-4">Descripción:</label>
+                    <input type="text" class="form-control" id="inp_desc" placeholder="Descripción">
+                    <label class="form-label mt-4">Precio:</label>
+                    <input type="number" class="form-control" id="inp_precio" placeholder="Precio en AR$">
+                    <label class="form-label mt-4">Imagen:</label>
+                    <input type="text" class="form-control" id="inp_img" placeholder="URL de imagen">
+                    <div class="form-group">
+                        <label for="exampleSelect1" class="form-label mt-4">Tipo de juego</label>
+                        <select class="form-select" id="slt_tipo">
+                          <option value="Juego digital">Digital</option>
+                          <option value="Juego Fisico">Fisico</option>
+                        </select>
+                      </div>
+                    <button type="button" class="btn btn-outline-light mt-4" id="btn_guardar">Guardar</button>
+                </div>
+            </div>
+            <div class="col-lg-8">
+                <table class="table table-hover mt-4">
+                    <thead>
+                        <tr class="table-primary">
+                            <th>N°</th>
+                            <th>Imagen</th>
+                            <th>Descripción</th>
+                            <th>Tipo</th>
+                            <th>Precio</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="mymodal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title">Modal title</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true"></span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <p>¿Está seguro que quiere eliminarlo?</p>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-primary" id="btn_borrar">Eliminar</button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+        </div>
+    </div>
+    </div>
+    <script src="main.js" type="module"></script>
+    <script src="auxiliar.js"></script>
+    <script src="bootstrap.bundle.min.js"></script>
+</body>
+</html>
