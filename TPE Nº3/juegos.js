@@ -47,11 +47,28 @@ export default class Juegos {
             filas.push(fila)
         });
         document.getElementById("tbody").innerHTML = filas.join('')
+        this.vaciar_formulario()
     }
     borrar_juego(indice){
         let lista_juegos = JSON.parse(localStorage.getItem("juegos"))
         lista_juegos.splice(indice,1)
         localStorage.setItem("juegos", JSON.stringify(lista_juegos))
         this.obtener_juegos()
+    }
+    editar(){
+        let index = localStorage.getItem("indice")
+        let listado = JSON.parse(localStorage.getItem("juegos"))
+        listado[index].descripcion = document.getElementById("inp_desc").value
+        listado[index].precio = document.getElementById("inp_precio").value
+        listado[index].tipo = document.getElementById("slt_tipo").value
+        listado[index].imagen = document.getElementById("inp_img").value
+        localStorage.setItem("juegos",JSON.stringify(listado))
+        this.obtener_juegos()
+        document.getElementById("btn_guardar").style.display = "block"
+        document.getElementById("btn_actualizar").style.display = "none"
+        this.vaciar_formulario()
+    }
+    vaciar_formulario(){
+        document.getElementById("form_juegos").reset()
     }
 }

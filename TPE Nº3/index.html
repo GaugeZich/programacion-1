@@ -28,6 +28,7 @@
       <div class="container">
         <div class="row">
             <div class="col-lg-4">
+                <form id="form_juegos">
                 <div class="form-group">
                     <label class="form-label mt-4">Descripción:</label>
                     <input type="text" class="form-control" id="inp_desc" placeholder="Descripción">
@@ -41,8 +42,10 @@
                           <option value="Juego digital">Digital</option>
                           <option value="Juego Fisico">Fisico</option>
                         </select>
-                      </div>
+                    </div>
+                    </form>
                     <button type="button" class="btn btn-outline-light mt-4" id="btn_guardar">Guardar</button>
+                    <button style="display: none;" type="button" class="btn btn-success mt-4" id="btn_actualizar">Actualizar</button>
                 </div>
             </div>
             <div class="col-lg-8">
@@ -67,7 +70,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
         <div class="modal-header">
-            <h5 class="modal-title">Modal title</h5>
+            <h5 class="modal-title">Eliminar</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
             <span aria-hidden="true"></span>
             </button>

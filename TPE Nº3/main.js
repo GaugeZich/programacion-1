@@ -17,5 +17,19 @@ function eliminar(){
     let indice = localStorage.getItem("indice")
     let juegos = new Juegos()
     juegos.borrar_juego(indice)
+    const truck_modal = document.querySelector('#mymodal');
+    const modal = bootstrap.Modal.getInstance(truck_modal);    
+    modal.hide()
 }
 document.getElementById("btn_borrar").addEventListener("click",eliminar)
+function editar(){
+    let juegos = new Juegos()
+    juegos.editar()
+}
+document.getElementById("btn_actualizar").addEventListener("click",editar)
+function limpiar(){
+    let juegos = new Juegos()
+    juegos.vaciar_formulario()
+}
+document.getElementById("btn_actualizar").addEventListener("click",limpiar)
+document.getElementById("btn_guardar").addEventListener("click",limpiar)

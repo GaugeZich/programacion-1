@@ -31,7 +31,7 @@ function editar(){
 document.getElementById("btn_actualizar").addEventListener("click",editar)
 function limpiar(){
     let producto = new Producto()
-    producto.vaciar_formulario
+    producto.vaciar_formulario()
 }
 document.getElementById("btn_actualizar").addEventListener("click",limpiar)
 document.getElementById("btn").addEventListener("click",limpiar)
