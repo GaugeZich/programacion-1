@@ -71,4 +71,49 @@ export default class Juegos {
     vaciar_formulario(){
         document.getElementById("form_juegos").reset()
     }
+    hacer_catalogo(){
+        let lista_juegos = JSON.parse(localStorage.getItem("juegos"))
+        let filas = []
+        lista_juegos.forEach((element,index) => {
+            let fila = `
+            <div class="card border-secondary mb-3" style="max-width: 20rem;">
+            <div class="card-header"><h3>${element.descripcion}</h3></div>
+            <div class="card-body">
+              <h4 class="card-title"><img src="${element.imagen}" alt="" width="285" height="200"></h4>
+              <p class="card-text">
+                Tipo de juego: ${element.tipo}
+                <br>
+                Precio: AR\$${element.precio}
+              </p>
+            </div>
+            <button type="button" class="btn btn-light">Lo quere compra ñero?</button>
+        </div>
+            `
+            filas.push(fila)
+        });
+        document.getElementById("div_1").innerHTML = filas.join('')
+        
+    }
+    cargar_pedido(){
+        let lista_juegos = JSON.parse(localStorage.getItem("juegos"))
+        let filas = []
+        /*
+        lista_juegos.forEach(element => {
+            let fila = `
+                <tr class="table-light">
+                    <td>${element.imagen}</td>
+                    <td>
+                        <input type="text" disabled value="1" size="1px">
+                        <button class="btn btn-light btn-sm"><i class="fa fa-plus-square-o"></i></button>
+                        <button class="btn btn-light btn-sm"><i class="fa fa-minus-square-o"></i></button>
+                    </td>
+                    <td>${element.precio}</td>
+                </tr>
+
+            `
+            filas.push(fila)
+        });
+        document.getElementById("div_1").innerHTML = filas.join('')
+        */
+    }
 }
