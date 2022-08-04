@@ -4,7 +4,3 @@ function hacer_catalogo(){
     juegos.hacer_catalogo()
 }
 hacer_catalogo()
-function cargar_pedido(){
-    let juegos = new Juegos()
-    juegos.cargar_pedido()
-}
